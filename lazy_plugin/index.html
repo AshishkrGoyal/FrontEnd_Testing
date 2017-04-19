@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>lazy_plugin</title>
+    <style>
+        img.lazy {
+            width: 700px;
+            height: 467px;
+            display: block;
+
+            background-image: url('gif.gif');
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+        }
+    </style>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.4/jquery.lazy.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.4/jquery.lazy.plugins.min.js"></script>
+
+    <script>
+        $(function() {
+            $('.lazy').lazy({
+                /*delay: 5000,*/
+                effect: "fadeIn",
+                effectTime: 2000,
+                threshold: 0
+            });
+        });
+    </script>
+</head>
+<body>
+
+<img class="lazy" data-src="image_1.jpg" />
+<img class="lazy" data-src="image_2.jpg" />
+<img class="lazy" data-src="image_3.jpg" />
+<img class="lazy" data-src="image_4.jpg" />
+</body>
+</html>
